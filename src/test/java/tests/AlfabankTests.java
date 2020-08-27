@@ -13,15 +13,14 @@ public class AlfabankTests {
         @Test
         public void depozitTests() {
                 open("https://alfabank.ru/");
+                
                 $(byText("Вклады")).click();
                 $$(byText("Депозиты")).find(Condition.visible).click();
                 $$(byText("Архивные депозиты")).find(Condition.visible).click();
+                
                 $$(".product-cell__row-wrapper row") .shouldHaveSize(3);
-
         }
-
-
-        }
+}
 
 
 
